@@ -1,0 +1,8 @@
+<div class="loginBox">
+    <img class="logo" src="../../../assets/tea.jpg" alt="Logo">
+    <form [formGroup]="login" (ngSubmit)="loginsubmit()">
+        <input type="text" placeholder="Enter your log i'd" formControlName="loginId">
+        <input type="password" placeholder="Enter your password" formControlName="password">
+        <button>Login</button>
+    </form>
+</div>
