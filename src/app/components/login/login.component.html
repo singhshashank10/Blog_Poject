@@ -1,8 +1,27 @@
-<div class="loginBox">
-    <img class="logo" src="../../../assets/tea.jpg" alt="Logo">
-    <form [formGroup]="login" (ngSubmit)="loginsubmit()">
-        <input type="text" placeholder="Enter your log i'd" formControlName="loginId">
-        <input type="password" placeholder="Enter your password" formControlName="password">
-        <button>Login</button>
-    </form>
+<div class="combined">
+    <div class="logoBox">
+        <img class="logo" src="../../../assets/tea.jpg" alt="Logo">
+    </div>
+    <div class="loginBox">
+        <form class="loginForm" [formGroup]="login" (ngSubmit)="loginSubmit()">
+            <div class="loginIdbox">
+                <input type="text" class="loginId" placeholder="Enter your log i'd" formControlName="loginId">
+                <span
+                    *ngIf=" this.login.controls['loginId'].hasError('required') && this.login.controls['loginId'].touched">*This
+                    is a required feild</span>
+
+            </div>
+            <div>
+                <input type="password" class="loginPassword" placeholder="Enter your password"
+                    formControlName="password">
+                <span
+                    *ngIf=" this.login.controls['password'].hasError('required') && this.login.controls['password'].touched ">*This
+                    is a required feild</span>
+            </div>
+            <div>
+                <button class="loginButton" [disabled]="login.invalid">Login</button>
+            </div>
+
+        </form>
+    </div>
 </div>

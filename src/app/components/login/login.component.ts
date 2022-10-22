@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -13,13 +14,20 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  flag: boolean = true;
+
   login = new FormGroup({
-    loginId: new FormControl(''),
-    password: new FormControl('')
+    loginId: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required,)
   })
 
-  loginsubmit() {
+  loginSubmit() {
     console.log('login id is: ' + (this.login.value).loginId);
     console.log('login password is: ' + (this.login.value).password);
+  }
+
+  checkFlag() {
+    this.flag = false;
+
   }
 }
