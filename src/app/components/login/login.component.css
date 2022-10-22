@@ -1,0 +1,40 @@
+.combined {
+    display: flex;
+}
+
+.logoBox {
+    width: 50em;
+    height: 40em;
+    margin-right: 3em;
+}
+
+.logo {
+    height: 40em;
+    width: 52em;
+}
+
+.loginBox {
+    display: flex;
+    margin: 2em;
+}
+
+span {
+    color: red;
+    margin-bottom: 1em;
+}
+
+.loginId,
+.loginPassword {
+    display: flex;
+}
+
+.loginId,
+.loginPassword,
+.loginButton {
+
+    width: 30em;
+    height: 2em;
+    margin-top: 1em;
+    margin-bottom: 0;
+    padding: 0.5em;
+}
