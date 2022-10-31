@@ -1,0 +1,21 @@
+.logo {
+    height: 46rem;
+    width: 45rem;
+}
+
+.combined {
+    display: flex;
+}
+
+.loginBox {
+    border: 2px solid black;
+    padding-left: 14rem;
+    padding-right: 12rem;
+    padding-top: 11%;
+    margin: 2px;
+    background-color: white;
+}
+
+.loginIdbox {
+    background-color: white;
+}

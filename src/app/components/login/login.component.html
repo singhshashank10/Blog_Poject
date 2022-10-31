@@ -3,27 +3,31 @@
         <img class="logo" src="../../../assets/tea.jpg" alt="Logo">
     </div>
     <div class="loginBox">
+
+        <div class="para">
+            <h1 id="welcome" class="loginIdbox">Xyz Company Name</h1>
+        </div>
         <form class="loginForm" [formGroup]="login" (ngSubmit)="loginSubmit()">
             <div class="loginIdbox">
                 <input type="text" class="loginId" placeholder="Enter your log i'd" formControlName="loginId">
-                <span
+                <span class="error"
                     *ngIf=" this.login.controls['loginId'].hasError('required') && this.login.controls['loginId'].touched">*This
                     is a required feild</span>
-
             </div>
-            <div>
+
+            <div class="loginIdbox">
                 <input type="password" class="loginPassword" placeholder="Enter your password"
                     formControlName="password">
-                <span
+                <span class="error"
                     *ngIf=" this.login.controls['password'].hasError('required') && this.login.controls['password'].touched ">*This
                     is a required feild</span>
             </div>
-            <div>
+            <div class="loginIdbox">
                 <button class="loginButton" [disabled]="login.invalid">Login</button>
             </div>
-
+            <div class="loginIdbox">
+                Don't have Account <a class="loginIdbox" routerLink="/signup">Click Here</a>
+            </div>
         </form>
-    </div>
-    <div>
     </div>
 </div>

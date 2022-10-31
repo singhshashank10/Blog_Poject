@@ -1,1 +1,25 @@
-<p>sign-up works!</p>
+<div class="signUpbox">
+    <form class="signUpForm" [formGroup]="signUpForm" (ngSubmit)="formSubmitted()">
+        <div class="firstNameBox">
+            <input type="text" class="firstName" formControlName="firstName" placeholder="Enter your First Name">
+        </div>
+        <div class="lastNameBox">
+            <input type="text" class="lastName" formControlName="lastName" placeholder="Enter your Last Name">
+        </div>
+        <div class="emailBox">
+            <input type="email" class="email" formControlName="email" placeholder="Enter your email">
+        </div>
+        <div class="contactBox">
+            <input type="number" class="contact" formControlName="contact" placeholder="Enter your contact number">
+        </div>
+        <div class="passwordBox">
+            <input type="password" class="password" formControlName="password" placeholder="Enter your password">
+        </div>
+        <div class="reEnteredPasswordBox">
+            <input type="password" class="reEnteredPassword" formControlName="reEnteredPassword"
+                placeholder="Re-Enter your password">
+        </div>
+        <button>Sign Up</button>
+    </form>
+    <span> Have an Account? <a routerLink="/login"> Click here</a> </span>
+</div>
